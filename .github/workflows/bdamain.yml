@@ -1,6 +1,6 @@
 name: tst
 on:
-   push:
+   issues:
     branches:
       - main
 
