@@ -1,16 +1,19 @@
-- name: Upload WebDAV
-  # You may pin to the exact commit or the version.
-  # uses: bxb100/action-upload-webdav@1a2d579b13ae40971017f3006fbff0ec280962cc
-  uses: bxb100/action-upload-webdav@v0.0.3
+-uses: tszalbot/action-upload-webdav@v1
   with:
     # The webdav address
     webdav_address: 
     # WebDAV username
     webdav_username: 
-    # WebDAV password
+    # WebDAV password-
     webdav_password: 
     # WebDAV upload path
     webdav_upload_path: 
+    # WebDAV certificate
+    webdav_cert: # optional
+    # WebDAV certificate ca
+    webdav_ca: # optional
+    # WebDAV certificate key
+    webdav_key: # optional
     # Newline-delimited list of path globs for asset files to upload
     files: 
     # Fail the action when exist unmatch file
