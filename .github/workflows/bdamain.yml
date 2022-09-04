@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: lijinke666/ding-talk-pr-notify@main
+      - uses: tszalbot/action-upload-webdav@v1
         with:
           webdav_address: "https://dav.jianguoyun.com/dav/"
           webdav_username: "364704199@qq.com"
