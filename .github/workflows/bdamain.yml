@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: tszalbot/action-upload-webdav@v1
+    runs-on: runs-on: ubuntu-latest
     steps:
       - uses: lijinke666/ding-talk-pr-notify@main
         with:
