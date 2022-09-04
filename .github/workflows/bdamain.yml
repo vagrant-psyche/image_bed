@@ -1,35 +1,17 @@
-name: test
+name: tst
 on:
-  push:
+   push:
     branches:
       - main
 
 jobs:
-  preview:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: tszalbot/action-upload-webdav@v1
     steps:
-      - uses: actions/checkout@v2
       - uses: lijinke666/ding-talk-pr-notify@main
         with:
-          ding_talk_token: ${{ secrets.DING_TALK_ACCESS_TOKEN}}
-
--uses: tszalbot/action-upload-webdav@v1
-  with:
-    # The webdav address
-    webdav_address: 
-    # WebDAV username
-    webdav_username: 
-    # WebDAV password-
-    webdav_password: 
-    # WebDAV upload path
-    webdav_upload_path: 
-    # WebDAV certificate
-    webdav_cert: # optional
-    # WebDAV certificate ca
-    webdav_ca: # optional
-    # WebDAV certificate key
-    webdav_key: # optional
-    # Newline-delimited list of path globs for asset files to upload
-    files: 
-    # Fail the action when exist unmatch file
-    fail_on_unmatched_files: # optional, default is false
+          webdav_address: "https://dav.jianguoyun.com/dav/"
+          webdav_username: "364704199@qq.com"
+          webdav_password: "a56p7pnrdcutmw73"
+          webdav_upload_path: "/task-2021-3"
+          files: "./**"
