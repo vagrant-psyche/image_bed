@@ -1,3 +1,18 @@
+name: test
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: lijinke666/ding-talk-pr-notify@main
+        with:
+          ding_talk_token: ${{ secrets.DING_TALK_ACCESS_TOKEN}}
+
 -uses: tszalbot/action-upload-webdav@v1
   with:
     # The webdav address
