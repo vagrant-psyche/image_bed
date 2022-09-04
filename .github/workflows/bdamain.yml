@@ -14,4 +14,4 @@ jobs:
           webdav_username: 364704199@qq.com
           webdav_password: a56p7pnrdcutmw73
           webdav_upload_path: "/task-2021-3"
-          files: ".*"
+          files: "./**"
